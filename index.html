@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UAE Car Tools & Dubai Car Calculators | Elite Car Dubai</title>
+  <meta name="description" content="Free UAE car tools including Dubai car loan calculator, fuel cost calculator, Salik calculator, traffic fine calculator and import duty calculator.">
+  <meta name="keywords" content="Dubai car calculator, UAE car loan calculator, Dubai fuel calculator, Salik calculator Dubai, UAE import duty calculator, Dubai traffic fine calculator">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Left Sticky Ad -->
+  <div class="hidden 2xl:block fixed left-4 top-1/3 z-40">
+    <div class="w-40 h-96 bg-gray-900 border border-gray-700 rounded-xl flex items-center justify-center text-gray-500 text-sm p-4 text-center">
+      Google AdSense Left Sidebar Ad
+    </div>
+  </div>
+
+  <!-- Right Sticky Ad -->
+  <div class="hidden 2xl:block fixed right-4 top-1/3 z-40">
+    <div class="w-40 h-96 bg-gray-900 border border-gray-700 rounded-xl flex items-center justify-center text-gray-500 text-sm p-4 text-center">
+      Google AdSense Right Sidebar Ad
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-black border-b border-gray-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-yellow-400">Elite Car Dubai</h1>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#loan" class="hover:text-yellow-400">Loan Calculator</a>
+        <a href="#fuel" class="hover:text-yellow-400">Fuel Calculator</a>
+        <a href="#salik" class="hover:text-yellow-400">Salik Tool</a>
+        <a href="#fine" class="hover:text-yellow-400">Traffic Fine</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Top Banner Ad -->
+  <div class="max-w-7xl mx-auto px-6 py-4 text-center">
+    <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl text-gray-400">
+      Google AdSense Top Banner Ad
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="py-20 bg-gradient-to-r from-black to-gray-900 text-center px-6">
+    <h2 class="text-5xl font-bold mb-6 text-yellow-400">Dubai & UAE Car Calculators</h2>
+    <p class="text-gray-300 max-w-3xl mx-auto text-lg">
+      Free UAE car tools including Dubai car loan calculator, fuel cost calculator, Salik toll calculator, import duty calculator and traffic fine estimator.
+    </p>
+
+    <div class="mt-10 flex flex-wrap justify-center gap-4">
+      <a href="#loan" class="bg-yellow-400 text-black px-6 py-3 rounded-xl font-semibold hover:bg-yellow-300">Car Loan Calculator</a>
+      <a href="#fuel" class="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-200">Fuel Calculator</a>
+    </div>
+  </section>
+
+  <!-- Google Ads Placeholder -->
+  <div class="max-w-7xl mx-auto px-6 py-6 text-center">
+    <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl text-gray-400">
+      Google AdSense Banner Area
+    </div>
+  </div>
+
+  <!-- Tools Grid -->
+  <section class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-8">
+
+    <!-- Loan Calculator -->
+    <div id="loan" class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800">
+      <h3 class="text-3xl font-bold text-yellow-400 mb-4">UAE Car Loan Calculator</h3>
+      <p class="text-gray-400 mb-6">Calculate monthly EMI for Dubai and UAE car financing.</p>
+
+      <input type="number" id="carPrice" placeholder="Car Price (AED)" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+      <input type="number" id="downPayment" placeholder="Down Payment (AED)" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+      <input type="number" id="interestRate" placeholder="Interest Rate %" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+      <input type="number" id="loanYears" placeholder="Loan Years" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+
+      <button onclick="calculateLoan()" class="w-full bg-yellow-400 text-black py-3 rounded-xl font-bold hover:bg-yellow-300">Calculate EMI</button>
+
+      <div id="loanResult" class="mt-6 text-xl text-green-400 font-bold"></div>
+    </div>
+
+    <!-- Fuel Calculator -->
+    <div id="fuel" class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800">
+      <h3 class="text-3xl font-bold text-yellow-400 mb-4">Dubai Fuel Cost Calculator</h3>
+      <p class="text-gray-400 mb-6">Estimate petrol cost for your Dubai road trips.</p>
+
+      <input type="number" id="distance" placeholder="Distance (KM)" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+      <input type="number" id="average" placeholder="Car Average (KM/L)" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+      <input type="number" id="fuelPrice" placeholder="Fuel Price Per Liter (AED)" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+
+      <button onclick="calculateFuel()" class="w-full bg-yellow-400 text-black py-3 rounded-xl font-bold hover:bg-yellow-300">Calculate Fuel Cost</button>
+
+      <div id="fuelResult" class="mt-6 text-xl text-green-400 font-bold"></div>
+    </div>
+
+    <!-- Salik Calculator -->
+    <div id="salik" class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800">
+      <h3 class="text-3xl font-bold text-yellow-400 mb-4">Dubai Salik Calculator</h3>
+      <p class="text-gray-400 mb-6">Calculate monthly Salik toll charges in Dubai.</p>
+
+      <input type="number" id="crossings" placeholder="Daily Crossings" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+
+      <button onclick="calculateSalik()" class="w-full bg-yellow-400 text-black py-3 rounded-xl font-bold hover:bg-yellow-300">Calculate Salik</button>
+
+      <div id="salikResult" class="mt-6 text-xl text-green-400 font-bold"></div>
+    </div>
+
+    <!-- Traffic Fine -->
+    <div id="fine" class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800">
+      <h3 class="text-3xl font-bold text-yellow-400 mb-4">Dubai Traffic Fine Calculator</h3>
+      <p class="text-gray-400 mb-6">Estimate speeding fines and black points in UAE.</p>
+
+      <input type="number" id="speedOver" placeholder="Over Speed Limit (KM/H)" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+
+      <button onclick="calculateFine()" class="w-full bg-yellow-400 text-black py-3 rounded-xl font-bold hover:bg-yellow-300">Calculate Fine</button>
+
+      <div id="fineResult" class="mt-6 text-xl text-green-400 font-bold"></div>
+    </div>
+
+  </section>
+
+  <!-- SEO Content -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <div class="bg-gray-900 p-10 rounded-2xl border border-gray-800">
+      <h2 class="text-4xl font-bold text-yellow-400 mb-6">Best UAE Car Tools Website</h2>
+      <p class="text-gray-300 leading-8 mb-4">
+        Elite Car Dubai provides free UAE car calculators including Dubai car loan calculator, fuel cost calculator, Salik toll estimator and traffic fine calculator. These tools help Dubai drivers estimate expenses quickly.
+      </p>
+
+      <p class="text-gray-300 leading-8 mb-4">
+        If you are searching for the best Dubai car finance calculator or UAE fuel calculator, this website provides accurate and easy-to-use tools for UAE residents.
+      </p>
+
+      <p class="text-gray-300 leading-8">
+        Our Dubai car tools are mobile friendly, SEO optimized and designed for fast performance.
+      </p>
+    </div>
+  </section>
+
+    <!-- Import Duty Calculator -->
+  <section class="max-w-7xl mx-auto px-6 py-10">
+    <div id="import" class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800">
+      <h3 class="text-3xl font-bold text-yellow-400 mb-4">UAE Car Import Duty & Cost Calculator</h3>
+      <p class="text-gray-400 mb-6">Calculate UAE customs duty, VAT and total imported car cost in Dubai.</p>
+
+      <input type="number" id="importCarPrice" placeholder="Car Price (AED)" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+      <input type="number" id="shippingCost" placeholder="Shipping Cost (AED)" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+
+      <button onclick="calculateImportDuty()" class="w-full bg-yellow-400 text-black py-3 rounded-xl font-bold hover:bg-yellow-300">Calculate Import Cost</button>
+
+      <div id="importResult" class="mt-6 text-xl text-green-400 font-bold"></div>
+    </div>
+  </section>
+
+  <!-- Used Car Value Calculator -->
+  <section class="max-w-7xl mx-auto px-6 py-10">
+    <div id="usedcar" class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800">
+      <h3 class="text-3xl font-bold text-yellow-400 mb-4">Dubai Used Car Price Estimator</h3>
+      <p class="text-gray-400 mb-6">Estimate resale value of your used car in UAE.</p>
+
+      <input type="number" id="originalPrice" placeholder="Original Car Price (AED)" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+      <input type="number" id="carAge" placeholder="Car Age (Years)" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+
+      <button onclick="calculateUsedValue()" class="w-full bg-yellow-400 text-black py-3 rounded-xl font-bold hover:bg-yellow-300">Estimate Used Car Value</button>
+
+      <div id="usedCarResult" class="mt-6 text-xl text-green-400 font-bold"></div>
+    </div>
+  </section>
+
+  <!-- Car Depreciation Calculator -->
+  <section class="max-w-7xl mx-auto px-6 py-10">
+    <div id="depreciation" class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800">
+      <h3 class="text-3xl font-bold text-yellow-400 mb-4">Car Depreciation Calculator UAE</h3>
+      <p class="text-gray-400 mb-6">Calculate yearly vehicle depreciation value in Dubai and UAE.</p>
+
+      <input type="number" id="depreciationPrice" placeholder="Car Price (AED)" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+      <input type="number" id="depreciationYears" placeholder="Years Used" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+
+      <button onclick="calculateDepreciation()" class="w-full bg-yellow-400 text-black py-3 rounded-xl font-bold hover:bg-yellow-300">Calculate Depreciation</button>
+
+      <div id="depreciationResult" class="mt-6 text-xl text-green-400 font-bold"></div>
+    </div>
+  </section>
+
+  <!-- Insurance Calculator -->
+  <section class="max-w-7xl mx-auto px-6 py-10">
+    <div id="insurance" class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800">
+      <h3 class="text-3xl font-bold text-yellow-400 mb-4">Dubai Car Insurance Estimate Tool</h3>
+      <p class="text-gray-400 mb-6">Estimate yearly car insurance cost in UAE.</p>
+
+      <input type="number" id="insuranceCarPrice" placeholder="Car Value (AED)" class="w-full p-3 rounded-lg bg-black border border-gray-700 mb-4">
+
+      <button onclick="calculateInsurance()" class="w-full bg-yellow-400 text-black py-3 rounded-xl font-bold hover:bg-yellow-300">Estimate Insurance</button>
+
+      <div id="insuranceResult" class="mt-6 text-xl text-green-400 font-bold"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="max-w-7xl mx-auto px-6 py-10">
+    <h2 class="text-4xl font-bold text-yellow-400 mb-10 text-center">Frequently Asked Questions</h2>
+
+    <div class="space-y-6">
+      <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+        <h3 class="text-2xl font-bold mb-3">How much is Salik in Dubai?</h3>
+        <p class="text-gray-400">Dubai Salik toll currently charges per gate crossing.</p>
+      </div>
+
+      <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+        <h3 class="text-2xl font-bold mb-3">How to calculate UAE car loan EMI?</h3>
+        <p class="text-gray-400">Use our UAE car loan calculator to estimate monthly payments based on car price, interest rate and loan duration.</p>
+      </div>
+
+      <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+        <h3 class="text-2xl font-bold mb-3">How much fuel cost in Dubai?</h3>
+        <p class="text-gray-400">Fuel cost depends on fuel prices, car average and travel distance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black border-t border-gray-800 py-10 mt-20">
+    <div class="max-w-7xl mx-auto px-6 text-center text-gray-500">
+      <p>© 2026 Elite Car Dubai — UAE Car Tools & Calculators</p>
+    </div>
+    <!-- Bottom Banner Ad -->
+  <div class="max-w-7xl mx-auto px-6 py-8 text-center">
+    <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl text-gray-400">
+      Google AdSense Bottom Banner Ad
+    </div>
+  </div>
+
+</footer>
+
+  <!-- Scripts -->
+  <script>
+
+    function calculateLoan() {
+      let price = parseFloat(document.getElementById('carPrice').value) || 0;
+      let down = parseFloat(document.getElementById('downPayment').value) || 0;
+      let rate = parseFloat(document.getElementById('interestRate').value) || 0;
+      let years = parseFloat(document.getElementById('loanYears').value) || 1;
+
+      let loanAmount = price - down;
+      let monthlyRate = rate / 100 / 12;
+      let months = years * 12;
+
+      let emi = (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, months)) /
+                (Math.pow(1 + monthlyRate, months) - 1);
+
+      document.getElementById('loanResult').innerHTML =
+        'Monthly EMI: AED ' + emi.toFixed(2);
+    }
+
+    function calculateFuel() {
+      let distance = parseFloat(document.getElementById('distance').value) || 0;
+      let average = parseFloat(document.getElementById('average').value) || 1;
+      let fuelPrice = parseFloat(document.getElementById('fuelPrice').value) || 0;
+
+      let liters = distance / average;
+      let total = liters * fuelPrice;
+
+      document.getElementById('fuelResult').innerHTML =
+        'Estimated Fuel Cost: AED ' + total.toFixed(2);
+    }
+
+    function calculateSalik() {
+      let crossings = parseFloat(document.getElementById('crossings').value) || 0;
+      let daily = crossings * 4;
+      let monthly = daily * 30;
+
+      document.getElementById('salikResult').innerHTML =
+        'Estimated Monthly Salik: AED ' + monthly.toFixed(2);
+    }
+
+    function calculateImportDuty() {
+      let carPrice = parseFloat(document.getElementById('importCarPrice').value) || 0;
+      let shipping = parseFloat(document.getElementById('shippingCost').value) || 0;
+
+      let customs = (carPrice + shipping) * 0.05;
+      let vat = (carPrice + shipping + customs) * 0.05;
+      let total = carPrice + shipping + customs + vat;
+
+      document.getElementById('importResult').innerHTML =
+        'Estimated Total Import Cost: AED ' + total.toFixed(2);
+    }
+
+    function calculateUsedValue() {
+      let price = parseFloat(document.getElementById('originalPrice').value) || 0;
+      let age = parseFloat(document.getElementById('carAge').value) || 0;
+
+      let value = price * Math.pow(0.85, age);
+
+      document.getElementById('usedCarResult').innerHTML =
+        'Estimated Used Car Value: AED ' + value.toFixed(2);
+    }
+
+    function calculateDepreciation() {
+      let price = parseFloat(document.getElementById('depreciationPrice').value) || 0;
+      let years = parseFloat(document.getElementById('depreciationYears').value) || 0;
+
+      let depreciated = price * (0.15 * years);
+
+      document.getElementById('depreciationResult').innerHTML =
+        'Estimated Depreciation: AED ' + depreciated.toFixed(2);
+    }
+
+    function calculateInsurance() {
+      let price = parseFloat(document.getElementById('insuranceCarPrice').value) || 0;
+
+      let insurance = price * 0.03;
+
+      document.getElementById('insuranceResult').innerHTML =
+        'Estimated Annual Insurance: AED ' + insurance.toFixed(2);
+    }
+
+    function calculateFine() {
+      let over = parseFloat(document.getElementById('speedOver').value) || 0;
+      let fine = 0;
+      let points = 0;
+
+      if (over <= 20) {
+        fine = 300;
+        points = 0;
+      } else if (over <= 40) {
+        fine = 600;
+        points = 4;
+      } else if (over <= 60) {
+        fine = 1000;
+        points = 6;
+      } else {
+        fine = 2000;
+        points = 12;
+      }
+
+      document.getElementById('fineResult').innerHTML =
+        'Estimated Fine: AED ' + fine + ' | Black Points: ' + points;
+    }
+
+  </script>
+
+</body>
+</html>
